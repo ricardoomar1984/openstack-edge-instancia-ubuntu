@@ -1,0 +1,20 @@
+terraform {
+  required_providers {
+    openstack = {
+      source  = "terraform-provider-openstack/openstack"
+      version = ">= 1.0.0"
+    }
+  }
+}
+
+
+
+provider "openstack" {
+  user_name     = "terraform"
+  tenant_name   = "1279234-project"
+  domain_name   = "1279234-domain"
+  password      = "P@ssw0rd01"
+  auth_url      = "https://identity.spo1.edge.embratel.cloud:5000/v3"
+  region        = "spo1"
+  endpoint_type = "public"
+}
